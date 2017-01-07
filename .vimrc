@@ -15,6 +15,7 @@ Plugin 'Shougo/neocomplete'
 Plugin 'Raimondi/delimitMate'
 Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'dsolstad/vim-wombat256i'
 
 call vundle#end()
 
