@@ -117,9 +117,6 @@ fi
 export GOPATH=/home/greg/code/go_code
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/greg/code/android_sdk_linux/tools:/home/greg/code/android_sdk_linux/platform-tools
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export ANDROID_NDK=/home/greg/code/android_sdk_linux/ndk/android-ndk-r10e
 
 source ~/.ssh/ssh-find-agent.sh
 set_ssh_agent_socket
@@ -130,5 +127,12 @@ then
 fi
 
 # make ctrl act like escape on tap
-xcape -e 'Control_L=Escape;Control_R=Escape'
+if ! pgrep -x "xcape" > /dev/null
+then
+    xcape -e 'Control_L=Escape;Control_R=Escape'
+fi
+
+if [ -f ~/.bashrc_local ]; then
+	. ~/.bashrc_local
+fi
 

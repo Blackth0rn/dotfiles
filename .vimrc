@@ -16,6 +16,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'dsolstad/vim-wombat256i'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -35,7 +36,7 @@ highlight Pmenu ctermbg=blue ctermfg=white
 " Smart indenting when starting new line
 set copyindent
 set preserveindent
-set noexpandtab
+set expandtab
 set shiftwidth=4
 set softtabstop=0
 set tabstop=4
